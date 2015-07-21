@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "NVStudent.h"
 @interface AppDelegate ()
-
+@property (strong,nonatomic) NSArray *arrayOfStudents;
 @end
 
 @implementation AppDelegate
@@ -29,8 +29,9 @@
     st3.name=@"John";
     st4.name=@"Monpacie";
     st5.name=@"Morinel";
-    NSArray *array=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
-    for (NVStudent* obj in array) {
+    //NSArray *array=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
+    self.arrayOfStudents=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
+    for (NVStudent* obj in self.arrayOfStudents) {
         [obj guessNumber:50 lowerBound:0 upperBound:100 resultBlock:^(NSString *name, double time) {
         NSLog(@"%@ finished in %f",name,time);
 
@@ -39,6 +40,25 @@
     
     //----------
     //end of Uchenik
+    
+    //Student
+    
+    for (NVStudent* obj in self.arrayOfStudents) {
+        [obj guessNumber2:50 lowerBound:0 upperBound:100 resultBlock:obj.result];
+    }
+    
+    //----------
+    //end of Student
+    
+    //Master
+    
+    for (NVStudent* obj in self.arrayOfStudents) {
+        [obj guessNumber3:50 lowerBound:0 upperBound:100 resultBlock:obj.result];
+    }
+    
+    //----------
+    //end of Master
+    
     return YES;
 }
 
