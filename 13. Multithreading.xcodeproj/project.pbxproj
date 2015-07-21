@@ -14,6 +14,7 @@
 		84A49CA91B5E998500D465F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A49CA81B5E998500D465F3 /* Images.xcassets */; };
 		84A49CAC1B5E998500D465F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A49CAA1B5E998500D465F3 /* LaunchScreen.xib */; };
 		84A49CB81B5E998500D465F3 /* _3__MultithreadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A49CB71B5E998500D465F3 /* _3__MultithreadingTests.m */; };
+		84A49CC31B5E99F900D465F3 /* NVStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A49CC21B5E99F900D465F3 /* NVStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		84A49CB11B5E998500D465F3 /* 13. MultithreadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "13. MultithreadingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A49CB61B5E998500D465F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A49CB71B5E998500D465F3 /* _3__MultithreadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _3__MultithreadingTests.m; sourceTree = "<group>"; };
+		84A49CC11B5E99F900D465F3 /* NVStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVStudent.h; sourceTree = "<group>"; };
+		84A49CC21B5E99F900D465F3 /* NVStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				84A49C9F1B5E998500D465F3 /* AppDelegate.h */,
 				84A49CA01B5E998500D465F3 /* AppDelegate.m */,
+				84A49CC11B5E99F900D465F3 /* NVStudent.h */,
+				84A49CC21B5E99F900D465F3 /* NVStudent.m */,
 				84A49CA21B5E998500D465F3 /* ViewController.h */,
 				84A49CA31B5E998500D465F3 /* ViewController.m */,
 				84A49CA51B5E998500D465F3 /* Main.storyboard */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A49CA41B5E998500D465F3 /* ViewController.m in Sources */,
+				84A49CC31B5E99F900D465F3 /* NVStudent.m in Sources */,
 				84A49CA11B5E998500D465F3 /* AppDelegate.m in Sources */,
 				84A49C9E1B5E998500D465F3 /* main.m in Sources */,
 			);

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NVStudent.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Uchenik
+    
+    NVStudent* st1=[[NVStudent alloc]init];
+    NVStudent* st2=[[NVStudent alloc]init];
+    NVStudent* st3=[[NVStudent alloc]init];
+    NVStudent* st4=[[NVStudent alloc]init];
+    NVStudent* st5=[[NVStudent alloc]init];
+    st1.name=@"Ivan";
+    st2.name=@"Maria";
+    st3.name=@"John";
+    st4.name=@"Monpacie";
+    st5.name=@"Morinel";
+    NSArray *array=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
+    for (NVStudent* obj in array) {
+        [obj guessNumber:50 lowerBound:0 upperBound:100 resultBlock:^(NSString *name, double time) {
+        NSLog(@"%@ finished in %f",name,time);
+
+        }];
+    }
+    
+    //----------
+    //end of Uchenik
     return YES;
 }
 
