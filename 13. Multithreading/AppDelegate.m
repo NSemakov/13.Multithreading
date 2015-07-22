@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 #import "NVStudent.h"
+#import "NVStudentSophomore.h"
 @interface AppDelegate ()
 @property (strong,nonatomic) NSArray *arrayOfStudents;
+@property (strong,nonatomic) NSArray *arrayOfNSOps;
 @end
 
 @implementation AppDelegate
@@ -32,8 +34,8 @@
     //NSArray *array=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
     self.arrayOfStudents=[NSArray arrayWithObjects:st1,st2,st3,st4,st5, nil];
     for (NVStudent* obj in self.arrayOfStudents) {
-        [obj guessNumber:50 lowerBound:0 upperBound:100 resultBlock:^(NSString *name, double time) {
-        NSLog(@"%@ finished in %f",name,time);
+        [obj guessNumber:50 lowerBound:0 upperBound:100 resultBlock:^(NSString *name, double time,NSString* methodName) {
+        NSLog(@"%@ finished in %f in method %@",name,time,@"guess1");
 
         }];
     }
@@ -58,6 +60,33 @@
     
     //----------
     //end of Master
+    
+    //Superman
+    NSInteger upperBound=100;
+    NSInteger lowerBound=0;
+    NSInteger number=50;
+    ResultBlock block=st1.result; //st1,st2... have the same block
+    NVStudentSophomore *sts1=[[NVStudentSophomore alloc]initWithStudent:st1 upperBound:upperBound lowerBound:lowerBound number:number resultBlock:block];
+    NVStudentSophomore *sts2=[[NVStudentSophomore alloc]initWithStudent:st2 upperBound:upperBound lowerBound:lowerBound number:number resultBlock:block];
+    NVStudentSophomore *sts3=[[NVStudentSophomore alloc]initWithStudent:st3 upperBound:upperBound lowerBound:lowerBound number:number resultBlock:block];
+    NVStudentSophomore *sts4=[[NVStudentSophomore alloc]initWithStudent:st4 upperBound:upperBound lowerBound:lowerBound number:number resultBlock:block];
+    NVStudentSophomore *sts5=[[NVStudentSophomore alloc]initWithStudent:st5 upperBound:upperBound lowerBound:lowerBound number:number resultBlock:block];
+    NSOperationQueue* q1=[[NSOperationQueue alloc]init];
+    
+    self.arrayOfNSOps=[NSArray arrayWithObjects:sts1,sts2,sts3,sts4,sts5, nil];
+    for (NVStudentSophomore *obj in self.arrayOfNSOps){
+        [q1 addOperation:obj];
+    }
+    //[q1 addOperation:sts1];
+    //[q1 addOperation:self.sts1];
+   /* self.sts1.name=@"vypusknik";
+    [self.sts1 guessNumber3:50 lowerBound:0 upperBound:100 resultBlock:self.sts1.result];
+    */
+    
+    NSOperationQueue* q2=[[NSOperationQueue alloc]init];
+    [q2 addOperationWithBlock:^{
+        NSLog(@"NSOperationQueue light");
+    }];
     
     return YES;
 }

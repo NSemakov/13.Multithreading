@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		849104EF1B5F0E6B00C14130 /* NVStudentSophomore.m in Sources */ = {isa = PBXBuildFile; fileRef = 849104EE1B5F0E6B00C14130 /* NVStudentSophomore.m */; };
 		84A49C9E1B5E998500D465F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A49C9D1B5E998500D465F3 /* main.m */; };
 		84A49CA11B5E998500D465F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A49CA01B5E998500D465F3 /* AppDelegate.m */; };
 		84A49CA41B5E998500D465F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A49CA31B5E998500D465F3 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		849104ED1B5F0E6B00C14130 /* NVStudentSophomore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVStudentSophomore.h; sourceTree = "<group>"; };
+		849104EE1B5F0E6B00C14130 /* NVStudentSophomore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVStudentSophomore.m; sourceTree = "<group>"; };
 		84A49C981B5E998500D465F3 /* 13. Multithreading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13. Multithreading.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A49C9C1B5E998500D465F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A49C9D1B5E998500D465F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 			children = (
 				84A49C9F1B5E998500D465F3 /* AppDelegate.h */,
 				84A49CA01B5E998500D465F3 /* AppDelegate.m */,
+				849104ED1B5F0E6B00C14130 /* NVStudentSophomore.h */,
+				849104EE1B5F0E6B00C14130 /* NVStudentSophomore.m */,
 				84A49CC11B5E99F900D465F3 /* NVStudent.h */,
 				84A49CC21B5E99F900D465F3 /* NVStudent.m */,
 				84A49CA21B5E998500D465F3 /* ViewController.h */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849104EF1B5F0E6B00C14130 /* NVStudentSophomore.m in Sources */,
 				84A49CA41B5E998500D465F3 /* ViewController.m in Sources */,
 				84A49CC31B5E99F900D465F3 /* NVStudent.m in Sources */,
 				84A49CA11B5E998500D465F3 /* AppDelegate.m in Sources */,
@@ -420,6 +426,7 @@
 				84A49CBD1B5E998500D465F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A49CBE1B5E998500D465F3 /* Build configuration list for PBXNativeTarget "13. MultithreadingTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				84A49CC01B5E998500D465F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

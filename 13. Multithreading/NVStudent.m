@@ -17,9 +17,9 @@
     if (self) {
         self.result=^(NSString *name,double time, NSString* methodName) {
             
-        //dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"%@ finished in %f from method %@",name,time,methodName);
-        //});
+            });
             
         };
     }
@@ -54,12 +54,8 @@
         while (guess !=number) {
             guess=arc4random_uniform((unsigned int)upperBound-(unsigned int)lowerBound+1);
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-       resultBlock(weakself.name,CACurrentMediaTime()-startTime,@"guess2");
-        });
         
-        
-        //resultBlock(weakself.name,CACurrentMediaTime()-startTime,@"guess2");
+        resultBlock(weakself.name,CACurrentMediaTime()-startTime,@"guess2");
     });
     
     
@@ -77,7 +73,7 @@
 }
 -(void) guessNumber3:(NSInteger) number lowerBound:(NSInteger) lowerBound upperBound:(NSInteger) upperBound resultBlock:(ResultBlock)resultBlock{
     __weak NVStudent* weakself=self;
-    
+    NSLog(@"name!!!!! %@",weakself.name);
     dispatch_queue_t queue=[NVStudent sharedQueue];
     dispatch_async(queue, ^{
         double startTime=CACurrentMediaTime();
@@ -86,7 +82,7 @@
             guess=arc4random_uniform((unsigned int)upperBound-(unsigned int)lowerBound+1);
         }
         
-        resultBlock(weakself.name,CACurrentMediaTime()-startTime,@"guess3");
+        resultBlock(weakself.name,CACurrentMediaTime()-startTime,NSStringFromSelector(@selector(guessNumber3:lowerBound:upperBound:resultBlock:))/*@"guess3"*/);
     });
     
     
